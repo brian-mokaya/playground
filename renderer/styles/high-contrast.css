@@ -1,0 +1,58 @@
+/* High Contrast Theme */
+body.high-contrast {
+  --primary-color: #000;
+  --secondary-color: #ffff00;
+  --text-color: #000;
+  --bg-color: #ffff;
+  --border-color: #000;
+}
+
+body.high-contrast header {
+  background-color: #000;
+  color: #ffff;
+  border: 3px solid #ffff;
+}
+
+body.high-contrast button {
+  background-color: #ffff;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: bold;
+}
+
+body.high-contrast button:hover {
+  background-color: #000;
+  color: #ffff;
+}
+
+body.high-contrast section {
+  border: 2px solid #000;
+  background-color: #ffff;
+}
+
+body.high-contrast #blockly-workspace {
+  border: 2px solid #000;
+  background-color: #ffff;
+}
+
+body.high-contrast #code-output {
+  background-color: #ffff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.high-contrast #console-log {
+  background-color: #ffff;
+  border: 2px solid #000;
+  color: #000;
+}
+
+body.high-contrast footer {
+  background-color: #000;
+  color: #ffff;
+  border-top: 3px solid #ffff;
+}
+
+body.high-contrast footer p {
+  color: #ffff;
+}

@@ -1,0 +1,57 @@
+/* Blockly Custom Theme */
+.blocklyBlockCanvas {
+  background-color: #fafafa !important;
+}
+
+.blocklyFlyout {
+  background-color: #e0e0e0 !important;
+}
+
+.blocklyCategory {
+  fill: #2196F3;
+  stroke: #1976D2;
+}
+
+.blocklyCategory:hover {
+  fill: #1976D2;
+}
+
+.blocklyMenuDiv {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.blocklyMenuItem {
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.blocklyMenuItem:hover {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Custom block colors */
+.blocklyBlock[type='motor_move_forward'],
+.blocklyBlock[type='motor_move_backward'],
+.blocklyBlock[type='motor_spin_left'],
+.blocklyBlock[type='motor_spin_right'] {
+  fill: #ff6f00;
+  stroke: #e65100;
+}
+
+.blocklyBlock[type='controls_repeat'],
+.blocklyBlock[type='controls_if'] {
+  fill: #6d4c41;
+  stroke: #4e342e;
+}
+
+.blocklyText {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+}
+
+.blocklyFieldLabel {
+  color: #000 !important;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inclusive Voice-Controlled IDE</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/high-contrast.css">
+  <link rel="stylesheet" href="styles/blockly-theme.css">
+</head>
+<body>
+  <header>
+    <h1>Inclusive Voice-Controlled IDE</h1>
+    <nav>
+      <button id="theme-toggle" aria-label="Toggle high contrast mode">High Contrast</button>
+      <button id="voice-toggle" aria-label="Toggle voice input">🎤 Voice Off</button>
+      <button id="run-code" aria-label="Run generated code">▶ Run</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blockly-container" aria-label="Block programming area">
+      <h2>Block Editor</h2>
+      <div id="blockly-workspace"></div>
+    </section>
+
+    <section id="code-preview" aria-label="Generated MicroPython preview">
+      <h2>Generated Code</h2>
+      <pre><code id="code-output"></code></pre>
+    </section>
+
+    <section id="console-output" aria-label="Device feedback and logs">
+      <h2>Device Feedback</h2>
+      <div id="console-log" role="log" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Voice Input: <span id="voice-status">Disconnected</span></p>
+    <p>Device Status: <span id="device-status">Idle</span></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/blockly@11.0.0/blockly_compressed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/blockly@11.0.0/blocks_compressed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/blockly@11.0.0/en.js"></script>
+  <script type="module" src="renderer.js"></script>
+</body>
+</html>

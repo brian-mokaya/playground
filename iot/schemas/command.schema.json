@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ESP32 Command Schema",
+  "type": "object",
+  "required": ["command", "timestamp"],
+  "properties": {
+    "command": {
+      "type": "string",
+      "enum": ["move_forward", "move_backward", "spin_left", "spin_right", "stop", "execute_python"],
+      "description": "Motor control command or code execution"
+    },
+    "timestamp": {
+      "type": "integer",
+      "description": "Unix timestamp in milliseconds"
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "distance": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Distance in units"
+        },
+        "degrees": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 360,
+          "description": "Rotation in degrees"
+        },
+        "speed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255,
+          "description": "Motor speed 0-255"
+        },
+        "python_code": {
+          "type": "string",
+          "description": "MicroPython code to execute"
+        }
+      }
+    },
+    "sequence": {
+      "type": "integer",
+      "description": "Command sequence number for ordering"
+    }
+  }
+}
